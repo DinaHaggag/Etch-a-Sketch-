@@ -19,7 +19,8 @@ function creatBoard(size){
         let div = document.createElement("div");
         div.style.backgroundColor = "white";
         div.addEventListener("mouseover",function(){
-            div.style.backgroundColor="purple";
+            let cl = colorDiv();
+            div.style.backgroundColor=cl;
         });
         container.insertAdjacentElement("beforeend",div);
 
@@ -50,16 +51,17 @@ function reset (){
     divs.forEach((div)=>div.style.backgroundColor="white");
 }
 
-// function colorDiv(){
-//     if (color == "random"){
-//         this.backgroundColor =  Math.floor(Math.random()*16777215).toString(16);
-//     }
-//     else {
-//         this.backgroundColor = "purple";
-//     }
-    
-// }
+function colorDiv(){
+    let backgroundColor ="";
+    if (color == "random"){
+        backgroundColor =  '#'+Math.floor(Math.random()*16777215).toString(16);
+    }
+    else {
+        backgroundColor = "purple";
+    }
+    return backgroundColor;
+}
 
-// function setColor (colorChoice){
-//     color = colorChoice;
-// }
+function setColor (colorChoice){
+    color = colorChoice;
+}
