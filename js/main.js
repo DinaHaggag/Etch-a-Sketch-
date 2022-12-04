@@ -48,7 +48,7 @@ function getSize(){
 
 function reset (){
     let divs =document.getElementById("myDIV").children;
-    divs.forEach((div)=>div.style.backgroundColor="white");
+    Array.from(divs).forEach((div)=>div.style.backgroundColor="white");
 }
 
 function colorDiv(){
